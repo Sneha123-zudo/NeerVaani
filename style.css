@@ -146,3 +146,53 @@
 .custom-shape-divider-bottom-1732394001 .shape-fill {
     fill: #034694;
 }
+.heading p{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 100px;
+    color: rgb(49, 65, 77);
+}
+.abt{
+    padding: 0px 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.abt .abt-img img{
+    width: 480px;
+    height: 480px;
+    border-radius: 20%;
+}
+.text p{
+    font-size: 1.5rem;
+    margin-left: 30px;
+    line-height: 2.3rem;
+    color: #0E3386;
+}
+.text h2{
+    font-size: 2rem;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.custom-shape-divider-top-1732435313 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1732435313 svg {
+    position: relative;
+    display: block;
+    width: calc(162% + 1.3px);
+    height: 198px;
+}
+
+.custom-shape-divider-top-1732435313 .shape-fill {
+    fill: #FFFFFF;
+}
