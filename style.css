@@ -166,16 +166,47 @@
     height: 480px;
     border-radius: 20%;
 }
+
+.text{
+
+    border: 1px solid;
+    text-align: center;
+    background-color: #18487f;
+    color: white;
+    width: 600px;
+    height: 430px;
+    padding:30px 40px;
+    border-radius: 40px;
+    position: relative;
+    animation: float 2.5s ease-in-out infinite;
+    box-shadow: 0 4px 8px #0f3868;
+
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .text p{
-    font-size: 1.5rem;
-    margin-left: 30px;
+    font-size: 1.3rem;
+    /*margin-left: 30px;*/
     line-height: 2.3rem;
-    color: #0E3386;
+    /*color: #0E3386;*/
 }
 .text h2{
     font-size: 2rem;
-    margin-left: 30px;
+    /*margin-left: 30px;*/
     margin-bottom: 30px;
+   /* color: rgb(49, 65, 77);*/
 }
 .custom-shape-divider-top-1732435313 {
     position: absolute;
@@ -196,3 +227,92 @@
 .custom-shape-divider-top-1732435313 .shape-fill {
     fill: #FFFFFF;
 }
+.mission-vision {
+    background: #f9f9f9; /* Light background color for better readability */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .mission-vision .container {
+    position: relative;
+  }
+  
+  .mission-vision .section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #006064;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .mission-vision .content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .mission-vision .card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%;
+    max-width: 45%;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s ease-out forwards;
+  }
+  
+  .mission-vision .card h3 {
+    font-size: 1.8rem;
+    color: #00796b;
+  }
+  
+  .mission-vision .card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #004d40;
+  }
+  
+  /* Animation Delays for Staggered Effect */
+  .delay-1 {
+    animation-delay: 0.5s;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Adjustments for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .mission-vision .content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mission-vision .card {
+      max-width: 90%;
+    }
+  }
+  

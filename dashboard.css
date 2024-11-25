@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Parkinsans:wght@300..800&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+ /* navbar  ............................    base.html */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 30px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.left-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-nav h3{
+    color: #0E3386;
+    /* font-family:'Times New Roman', Times, serif; */
+    font-size: 1.8rem;
+}
+
+
+.mid-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.mid-nav ul li{
+    list-style: none;
+}
+
+.mid-nav ul li a{
+    text-decoration: none;
+    color: #034694;
+    font-weight: 600;
+    font-size: 1rem;
+    font-size: 1rem;
+    padding: 1vw 10px;
+}
+
+.right-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px solid #034694 ;
+    background-color: #034694;
+    padding: 10px 20px;
+    border-radius:25px;
+    
+}
+
+.right-nav ul li{
+    list-style: none;
+}
+
+.right-nav ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.logo-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.boxes{
+   /* display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+     gap: 1rem;*/
+    margin-top:80px;
+    padding: 0px 0px;
+    margin-bottom: 50px;
+}
+.card1{
+    width: 420px;
+    height: 450px;
+    border: 1px solid rgb(107, 121, 172); 
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: rgb(107, 121, 172);
+    box-shadow: 0 4px 8px rgb(107, 121, 172);
+
+}
+.card1:hover{
+    background-color: rgb(107, 121, 172); 
+}
+.card1 h1 {
+    color: #242121;
+    text-align: center;
+}
+.card1 h3{
+    text-align: center;
+    font-family: Spectral, serif;
+    color:#242121;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+.card1 p{
+    font-family: Spectral, serif;
+    color: #242121;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+.card1 a{
+    text-decoration: none;
+    color: #242121;
+}
+.card1 h5{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+.cal-img img{
+    width: 340px;
+    height: 420px;
+    position: relative;
+    animation: float 2.5s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.calculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+.cal2-img img{
+
+    width: 400px;
+    height: 350px;
+    position: relative;
+    animation: float 2.5s ease-in-out infinite;
+    margin-top: 100px;
+    
+}
+.calculator2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.card2{
+    width: 420px;
+    height: 450px;
+    border: 1px solid #1d6761; 
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: #0d887e;
+    box-shadow: 0 4px 8px #01796F;
+    margin-top: 80px;
+
+}
+.card2:hover{
+    background-color: #01796F; 
+}
+.card2 h1 {
+    color: #242121;
+    text-align: center;
+}
+.card2 h3{
+    text-align: center;
+    font-family: Spectral, serif;
+    color:#242121;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+.card2 p{
+    font-family: Spectral, serif;
+    color: #242121;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+.card2 a{
+    text-decoration: none;
+    color: #242121;
+}
+.card2 h5{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
