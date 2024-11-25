@@ -103,9 +103,7 @@
     box-shadow: 0 4px 8px rgb(107, 121, 172);
 
 }
-.card1:hover{
-    background-color: rgb(107, 121, 172); 
-}
+
 .card1 h1 {
     color: #242121;
     text-align: center;
@@ -187,9 +185,7 @@
     margin-top: 80px;
 
 }
-.card2:hover{
-    background-color: #01796F; 
-}
+
 .card2 h1 {
     color: #242121;
     text-align: center;
@@ -218,4 +214,120 @@
     text-align: center;
     margin-top: 20px;
     font-size: 1.3rem;
+}
+.calculator3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+.card3{
+    width: 420px;
+    height: 450px;
+    border: 1px solid #798add; 
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: #798add;
+    box-shadow: 0 4px 8px #798add;
+    margin-top: 80px;
+   
+
+}
+.card3 h1 {
+    color: #242121;
+    text-align: center;
+}
+.card3 h3{
+    text-align: center;
+    font-family: Spectral, serif;
+    color:#242121;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+.card3 p{
+    font-family: Spectral, serif;
+    color: #242121;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+.card3 a{
+    text-decoration: none;
+    color: #242121;
+}
+.card3 h5{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+.cal3-img img{
+
+    width: 380px;
+    height: 300px;
+    margin-top: 65px;
+    border-radius: 30px;
+    position: relative;
+    animation: float 2.5s ease-in-out infinite;
+    
+}
+.calculator4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+.card4{
+    width: 420px;
+    height: 450px;
+    border: 1px solid #6570a5; 
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: #676e92;
+    box-shadow: 0 4px 8px #6570a5;
+    margin-top: 80px;
+   
+
+}
+.card4 h1 {
+    color: #242121;
+    text-align: center;
+}
+.card4 h3{
+    text-align: center;
+    font-family: Spectral, serif;
+    color:#242121;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+.card4 p{
+    font-family: Spectral, serif;
+    color: #242121;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-bottom: 60px;
+    font-size: 1.2rem;
+}
+.card4 a{
+    text-decoration: none;
+    color: #242121;
+}
+.card4 h5{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+.cal4-img img{
+
+    width: 380px;
+    height: 300px;
+    margin-top: 65px;
+    border-radius: 30px;
+    position: relative;
+    animation: float 2.5s ease-in-out infinite;
+    
 }
