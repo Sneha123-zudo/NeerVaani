@@ -1,0 +1,103 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #333;
+    color: white;
+    overflow-y: auto; /* Add vertical scrollbar */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    transition: 0.3s;
+    padding-top: 20px;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #575757 #333; /* For Firefox */
+  }
+  
+  /* Custom scrollbar for Webkit-based browsers */
+  .sidebar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    background: #4d1717;
+    border-radius: 5px;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #640d0d;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 15px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  
+  .sidebar ul li a:hover {
+  }
+  
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Main content */
+  .main-content {
+    margin-left: 20px;
+    padding: 20px;
+  }
+  
+  .open-btn {
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .open-btn:hover {
+    background-color: #575757;
+  }
+  
+  .left-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-nav h3{
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+}
+.logo-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}

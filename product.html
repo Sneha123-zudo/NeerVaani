@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="product.css">
+  <title>Sidebar Example</title>
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <div class="left-nav">
+        <img class="logo-img" src="./images/Neer2 logo.png" alt="">
+        <h3><i>NeerVaani</i></h3>
+    </div>
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <ul>
+      <li><a href="#home">Categories</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <button class="open-btn" onclick="toggleSidebar()">☰</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
