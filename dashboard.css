@@ -85,39 +85,38 @@
 }
 
 .boxes{
-   /* display: grid;
-    grid-template-columns: repeat(3,1fr);
+   display: grid;
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
-     gap: 1rem;*/
     margin-top:80px;
-    padding: 0px 0px;
-    margin-bottom: 50px;
+    gap: 2rem;
+    
 }
 .card1{
     width: 420px;
     height: 450px;
-    border: 1px solid rgb(107, 121, 172); 
+    border: 1px solid none; 
     border-radius: 30px;
     padding: 10px 20px;
-    background-color: rgb(107, 121, 172);
-    box-shadow: 0 4px 8px rgb(107, 121, 172);
+    box-shadow: 0 4px 8px rgb(80, 80, 80);;
+    margin-left: 100px;
 
 }
 
 .card1 h1 {
-    color: #242121;
+    color: #0f509b;
     text-align: center;
 }
 .card1 h3{
     text-align: center;
     font-family: Spectral, serif;
-    color:#242121;
+    color:#0f509b;
     margin-top: 20px;
     font-size: 1.5rem;
 }
 .card1 p{
     font-family: Spectral, serif;
-    color: #242121;
+    color: rgba(37, 41, 100, 0.9);
     line-height: 1.8rem;
     text-align: center;
     margin-top: 50px;
@@ -126,80 +125,37 @@
 }
 .card1 a{
     text-decoration: none;
-    color: #242121;
+    color: white;
 }
 .card1 h5{
     text-align: center;
     margin-top: 20px;
     font-size: 1.3rem;
 }
-.cal-img img{
-    width: 340px;
-    height: 420px;
-    position: relative;
-    animation: float 2.5s ease-in-out infinite;
-}
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-.calculator{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20%;
-}
-
-.cal2-img img{
-
-    width: 400px;
-    height: 350px;
-    position: relative;
-    animation: float 2.5s ease-in-out infinite;
-    margin-top: 100px;
-    
-}
-.calculator2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-}
 .card2{
     width: 420px;
     height: 450px;
-    border: 1px solid #1d6761; 
+    border: 1px solid none; 
     border-radius: 30px;
     padding: 10px 20px;
-    background-color: #0d887e;
-    box-shadow: 0 4px 8px #01796F;
-    margin-top: 80px;
-
+    box-shadow: 0 4px 8px rgb(80, 80, 80);
+    margin-left: 100px;
 }
 
 .card2 h1 {
-    color: #242121;
+    color: #0f509b;
     text-align: center;
 }
 .card2 h3{
     text-align: center;
     font-family: Spectral, serif;
-    color:#242121;
+    color:#0f509b;
     margin-top: 20px;
     font-size: 1.5rem;
 }
 .card2 p{
     font-family: Spectral, serif;
-    color: #242121;
+    color: rgba(37, 41, 100, 0.9);
     line-height: 1.8rem;
     text-align: center;
     margin-top: 30px;
@@ -208,45 +164,38 @@
 }
 .card2 a{
     text-decoration: none;
-    color: #242121;
+    color: white;
 }
 .card2 h5{
     text-align: center;
     margin-top: 20px;
     font-size: 1.3rem;
 }
-.calculator3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20%;
-}
 .card3{
     width: 420px;
     height: 450px;
-    border: 1px solid #798add; 
+    border: 1px solid none; 
     border-radius: 30px;
     padding: 10px 20px;
-    background-color: #798add;
-    box-shadow: 0 4px 8px #798add;
-    margin-top: 80px;
-   
+    box-shadow: 0 4px 8px rgb(80, 80, 80);;
+    margin-left: 100px;
+    margin-top: 30px;
 
 }
 .card3 h1 {
-    color: #242121;
+    color: #0f509b;
     text-align: center;
 }
 .card3 h3{
     text-align: center;
     font-family: Spectral, serif;
-    color:#242121;
+    color:#0f509b;
     margin-top: 20px;
     font-size: 1.5rem;
 }
 .card3 p{
     font-family: Spectral, serif;
-    color: #242121;
+    color: rgba(37, 41, 100, 0.9);
     line-height: 1.8rem;
     text-align: center;
     margin-top: 50px;
@@ -256,55 +205,39 @@
 }
 .card3 a{
     text-decoration: none;
-    color: #242121;
+    color: white;
 }
 .card3 h5{
     text-align: center;
     margin-top: 20px;
     font-size: 1.3rem;
 }
-.cal3-img img{
 
-    width: 380px;
-    height: 300px;
-    margin-top: 65px;
-    border-radius: 30px;
-    position: relative;
-    animation: float 2.5s ease-in-out infinite;
-    
-}
-.calculator4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20%;
-}
 .card4{
     width: 420px;
     height: 450px;
-    border: 1px solid #6570a5; 
+    border: 1px solid none; 
     border-radius: 30px;
     padding: 10px 20px;
-    background-color: #676e92;
-    box-shadow: 0 4px 8px #6570a5;
-    margin-top: 80px;
-   
+    box-shadow: 0 4px 8px rgb(80, 80, 80);;
+    margin-left: 100px;
+    margin-top: 30px;
 
 }
 .card4 h1 {
-    color: #242121;
+    color: #0f509b;
     text-align: center;
 }
 .card4 h3{
     text-align: center;
     font-family: Spectral, serif;
-    color:#242121;
+    color:#0f509b;
     margin-top: 20px;
     font-size: 1.5rem;
 }
 .card4 p{
     font-family: Spectral, serif;
-    color: #242121;
+    color: rgba(37, 41, 100, 0.9);
     line-height: 1.8rem;
     text-align: center;
     margin-top: 50px;
@@ -314,20 +247,31 @@
 }
 .card4 a{
     text-decoration: none;
-    color: #242121;
+    color: white;
 }
 .card4 h5{
     text-align: center;
     margin-top: 20px;
     font-size: 1.3rem;
 }
-.cal4-img img{
-
-    width: 380px;
-    height: 300px;
-    margin-top: 65px;
-    border-radius: 30px;
-    position: relative;
-    animation: float 2.5s ease-in-out infinite;
-    
+.exp-btn button{
+    border: none;
+    background-color: #0f509b;
+    color:white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    margin-left: 110px;
 }
+.exp-btn button a{
+    text-decoration: none;
+    color: white;
+}
+
+*::-webkit-scrollbar{
+    width: 0.25rem;
+    height: 0.25rem;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    }
