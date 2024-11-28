@@ -1,3 +1,33 @@
+// Sidebar toggle
+const sidebar = document.getElementById('sidebar');
+const openBtn = document.getElementById('open-btn');
+const closeBtn = document.getElementById('close-btn');
+
+openBtn.addEventListener('click', () => {
+  sidebar.classList.add('open');
+});
+
+closeBtn.addEventListener('click', () => {
+  sidebar.classList.remove('open');
+});
+
+// Submenu toggle
+const menuButtons = document.querySelectorAll('.menu-btn');
+
+menuButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const parent = button.parentElement;
+    const submenu = parent.querySelector('.submenu');
+
+    // Toggle open class
+    parent.classList.toggle('open');
+
+    // Show/hide submenu
+    submenu.style.display = parent.classList.contains('open') ? 'block' : 'none';
+  });
+});
+
+
 // Function to search the content on the page
 function searchContent() {
   // Get the search input value

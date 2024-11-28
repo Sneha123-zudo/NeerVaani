@@ -1,103 +1,130 @@
 /* General Reset */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Sidebar styling */
-  .sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    background-color: #333;
-    color: white;
-    overflow-y: auto; /* Add vertical scrollbar */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    transition: 0.3s;
-    padding-top: 20px;
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: #575757 #333; /* For Firefox */
-  }
-  
-  /* Custom scrollbar for Webkit-based browsers */
-  .sidebar::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  .sidebar::-webkit-scrollbar-thumb {
-    background: #4d1717;
-    border-radius: 5px;
-  }
-  
-  .sidebar::-webkit-scrollbar-thumb:hover {
-    background: #640d0d;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    padding: 15px;
-  }
-  
-  .sidebar ul li a {
-    text-decoration: none;
-    color: white;
-    display: block;
-  }
-  
-  .sidebar ul li a:hover {
-  }
-  
-  /* Close button */
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 25px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  /* Main content */
-  .main-content {
-    margin-left: 20px;
-    padding: 20px;
-  }
-  
-  .open-btn {
-    font-size: 20px;
-    padding: 10px 15px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .open-btn:hover {
-    background-color: #575757;
-  }
-  
-  .left-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.left-nav h3{
-    color: white;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 1.8rem;
+/* Container for both search bar and content */
+.container {
+  width: 100%;
+  text-align: center;
 }
-.logo-img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
+
+/* Search bar container to center it at the top */
+.search-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Styling the search bar */
+.search-bar {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Search bar input */
+.search-bar input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+/* Search button */
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #18bc9c;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #16a085;
+}
+
+/* Upload button styling */
+.upload-btn {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #3498db;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Hide the file input */
+.upload-btn input[type="file"] {
+  display: none;
+}
+
+.upload-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Scan button styling */
+.scan-btn {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scan-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Content Section Styling */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.content-item {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  width: 300px;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Displaying file name */
+#file-name {
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Displaying scan result */
+#scan-result {
+  margin-top: 10px;
+  color: green;
 }

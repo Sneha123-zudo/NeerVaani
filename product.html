@@ -3,25 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search, Upload & Scan</title>
   <link rel="stylesheet" href="product.css">
-  <title>Sidebar Example</title>
 </head>
 <body>
-  <div class="sidebar" id="sidebar">
-    <div class="left-nav">
-        <img class="logo-img" src="./images/Neer2 logo.png" alt="">
-        <h3><i>NeerVaani</i></h3>
+  <div class="container">
+    <!-- Search Bar with Upload and Scan options -->
+    <div class="search-container">
+      <form class="search-bar" onsubmit="return searchContent()">
+        <input type="text" id="search-input" placeholder="Search content..." />
+        <button type="submit">Search</button>
+
+        <!-- Upload Button -->
+        <label for="file-upload" class="upload-btn">
+          Upload
+          <input id="file-upload" type="file" onchange="handleFileSelect()" />
+        </label>
+
+        <button type="button" class="scan-btn" onclick="scanFile()">Scan</button>
+      </form>
     </div>
-    <button class="close-btn" onclick="toggleSidebar()">×</button>
-    <ul>
-      <li><a href="#home">Categories</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-  <div class="main-content">
-    <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Display selected file name -->
+    <p id="file-name"></p>
+    <p id="scan-result"></p>
+
+    <!-- Content Section for Searching -->
+    <div class="content">
+      <div class="content-item" data-title="HTML Basics">
+        <h2>HTML Basics</h2>
+        <p>HTML stands for HyperText Markup Language...</p>
+      </div>
+      <div class="content-item" data-title="CSS Styling">
+        <h2>CSS Styling</h2>
+        <p>CSS is used to control the layout of a web page...</p>
+      </div>
+      <div class="content-item" data-title="JavaScript Introduction">
+        <h2>JavaScript Introduction</h2>
+        <p>JavaScript is a programming language used for web development...</p>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>

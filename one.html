@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeerVaani</title>
+  <link rel="shortcut icon" href="images/Neer logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="one.css">
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">&times;</button>
+    <div class="left-nav">
+      <img class="logo-img" src="./images/Neer2 logo.png" alt="">
+      <h3>NeerVaani</h3>
+    </div>
+    <div class="head-cate">
+      <h3>Categories</h3>
+    </div>
+    <nav>
+      <div class="menu-item">
+        <button class="menu-btn"> Food Crops<span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Cereals and Grains</li>
+          <li>Pulses (Legumes)</li>
+          <li>Vegetables</li>
+          <li>Fruits</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="menu-btn">Cash Crops <span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Oilseeds</li>
+          <li>Fiber Crops</li>
+          <li>Sugar Crops</li>
+          <li>Spices and Condiments</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="menu-btn"> Plantation Crops<span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Tea</li>
+          <li>Coffee</li>
+          <li>Cocoa</li>
+          <li>Rubber</li>
+          <li>Coconut</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="menu-btn">Livestock Products<span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Dairy Products</li>
+          <li>Eggs</li>
+          <li>Wool</li>
+          <li>Leather</li>
+          <li>Honey</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="menu-btn"> Forestry Products<span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Timber</li>
+          <li>Pulpwood</li>
+          <li>Bamboo</li>
+          <li>Firewood</li>
+          <li>Resin and latex</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="menu-btn">Medicinal and Herbal Crops<span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Neem</li>
+          <li>Ashwagandha</li>
+          <li>Turmeric</li>
+          <li>Ginger</li>
+          <li>Aloe Vera</li>
+          <li>Tulsi </li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="menu-btn">Fodder Crops<span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Alfalfa</li>
+          <li>Clover</li>
+          <li>Maize</li>
+          <li>Sorghum</li>
+          <li>Napier grass</li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <button class="open-btn" id="open-btn">☰ </button>
+  </div>
+  <div class="container">
+    <!-- Search Bar with Upload and Scan options -->
+    <div class="search-container">
+      <form class="search-bar" onsubmit="return searchContent()">
+        <input type="text" id="search-input" placeholder="Search content..." />
+        <button type="submit">Search</button>
+
+        <!-- Upload Button -->
+        <label for="file-upload" class="upload-btn">
+          Upload
+          <input id="file-upload" type="file" onchange="handleFileSelect()" />
+        </label>
+
+        <button type="button" class="scan-btn" onclick="scanFile()">Scan</button>
+      </form>
+    </div>
+
+    <!-- Display selected file name -->
+    <p id="file-name"></p>
+    <p id="scan-result"></p>
+
+    <!-- Content Section for Searching -->
+     <div class="wel-head">
+      <h4>Welcome to NeerVaani: The Smart Way to Search, Scan, <br>and Calculate Your Agricultural Water Usage</h4>
+     </div>
+    <div class="content">
+      <div class="content-item" data-title="HTML Basics">
+        <h2>Food Crops</h2>
+        <h4>Cereals and Grains</h4>
+        <div class="img-box">
+          <div class="rice">
+            <div class="rice-img">
+              <img src="images/rice.jpeg" alt="">
+            </div>
+            <div class="name-head">
+              <p>Rice</p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="content-item" data-title="CSS Styling">
+        <h2>CSS Styling</h2>
+        <p>CSS is used to control the layout of a web page...</p>
+      </div>
+      <div class="content-item" data-title="JavaScript Introduction">
+        <h2>JavaScript Introduction</h2>
+        <p>JavaScript is a programming language used for web development...</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="one.js"></script>
+</body>
+
+</html>
