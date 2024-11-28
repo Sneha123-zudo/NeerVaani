@@ -25,7 +25,7 @@ body {
   height: 100%;
   background-color: rgb(255, 255, 255);
   color: #317873;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(80, 80, 80);
   transition: transform 0.3s ease;
   overflow-y: auto;
   border-top-right-radius:10px ;
@@ -320,4 +320,18 @@ nav{
 .wel-head h4{
   font-size: 1.1rem;
   margin-top: 30px;
+}
+.rice-img img{
+  width: 100px;
+  height: 100px;
+}
+.img-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.name-head p{
+  font-size: 0.8rem;
+  text-align: center;
 }
