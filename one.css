@@ -11,16 +11,16 @@ body {
   height: 100vh;
 }
 
-.main-content {
+/*.main-content {
   flex: 1;
   padding: 20px;
 }
-
+*/
 /* Sidebar Styles */
-.sidebar {
+/*.sidebar {
   position: fixed;
   top: 0;
-  left: -300px; /* Hidden offscreen */
+  left: -300px; 
   width: 300px;
   height: 100%;
   background-color: rgb(255, 255, 255);
@@ -33,10 +33,9 @@ body {
 }
 
 .sidebar.open {
-  transform: translateX(300px); /* Slide in */
+  transform: translateX(300px); 
 }
 
-/* Close Button */
 .close-btn {
   background: none;
   color: #34495e;
@@ -48,18 +47,18 @@ body {
   cursor: pointer;
 }
 
-/* Open Button */
+
 .open-btn {
-  background-color: black;
+  background-color: white;
   color: #34495e;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 25px;
   cursor: pointer;
   border-radius: 5px;
 }
 
-/* Menu Items */
+
 .menu-item {
   margin: 20px 0;
 }
@@ -82,7 +81,7 @@ body {
   background-color: #ffffff;
 }
 
-/* Submenu */
+
 .submenu {
   list-style: none;
   margin: 0;
@@ -102,7 +101,7 @@ body {
   transition: .3s ease;
 }
 
-/* Arrow Rotation */
+
 .arrow {
   transition: transform 0.3s ease;
 }
@@ -157,10 +156,10 @@ nav{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
-*/
+
 ::-webkit-scrollbar{
   display: none;
-}
+}*/
 
 
 .search-container {
@@ -250,7 +249,7 @@ nav{
   font-size: 16px;
   color: white;
   background-color: #3498db;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
   display: inline-flex;
@@ -289,6 +288,7 @@ nav{
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  color: #333;
 }
 
 .content-item {
@@ -297,7 +297,7 @@ nav{
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
-  width: 700px;
+  width: 900px;
   text-align: left;
 }
 
@@ -320,10 +320,12 @@ nav{
 .wel-head h4{
   font-size: 1.1rem;
   margin-top: 30px;
+  color: #333;
 }
 .rice-img img{
   width: 100px;
   height: 100px;
+  border-radius: 10px;
 }
 .img-box{
   display: flex;
