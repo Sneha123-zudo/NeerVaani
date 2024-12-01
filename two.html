@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Slider Form</title>
+    <link rel="stylesheet" href="two.css">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="slider-container">
+        <form id="calculator-form">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img class="img1" src="images/farmer.png" alt="">
+                <label for="crop_name" class="crop-name">Name of the Crop</label>
+                <input type="text" id="crop_name" name="crop_name" placeholder="Enter the name of the crop" required>
+                <div class="buttons">
+                    <button class="button1" onclick="nextSlide()">Next <i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img class="img1" src="images/yield.png" alt="">
+                <label for="yield_value" class="crop-name">Average Yield (per unit)</label>
+                <input type="number" id="yield_value" name="yield_value"  placeholder="Enter the average yeild" required>
+                <select name="yield_unit" class="yield-value" >
+                    <option value="units">Units</option>
+                    <option value="quintals">Quintals</option>
+                    <option value="kilograms">Kilograms</option>
+                    <option value="tons">Tons</option>
+                </select>
+                <div class="buttons">
+                    <button class="prev-btn" onclick="prevSlide()">Previous<i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="nxt-btn" onclick="nextSlide()">Next<i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img class="img1" src="images/rainfall.png" alt="">
+                <label for="rainfall" class="crop-name" >Average Annual Rainfall (mm)</label>
+                <input type="number" id="rainfall" name="rainfall" required>
+                <button
+                    onclick="showInfoModal('Rainfall Info', 'Rainfall is measured in millimeters (mm) using rain gauges, which collect and measure the volume of water.')">?</button>
+                <div class="buttons">
+                    <button class="prev-btn"  onclick="prevSlide()">Previous<i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button  class="nxt-btn" onclick="nextSlide()">Next<i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img class="img1" src="images/temp.png" alt="">
+                <label for="temperature" class="crop-name" >Temperature Range During Growing Season (°C)</label>
+                <input type="text" id="temperature" name="temperature" placeholder="e.g., 20-30" required>
+                <div class="buttons">
+                    <button  class="prev-btn"  onclick="prevSlide()">Previous<i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="nxt-btn" onclick="nextSlide()">Next<i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img class="img1" src="images/irrigation.png" alt="">
+                <label for="irrigation_type" class="crop-name" >Type of Irrigation</label>
+                <select id="irrigation_type" name="irrigation_type" class="yield-value" >
+                    <option value="drip">Irrigation Type</option>
+                    <option value="drip">Drip</option>
+                    <option value="sprinkler">Sprinkler</option>
+                    <option value="flood">Flood</option>
+                </select>
+                <button type="button"
+                    onclick="showInfoModal('Irrigation Info', 'Drip irrigation saves water by delivering it directly to plant roots. Sprinklers mimic rain. Flooding uses large volumes of water.')">?</button>
+
+                <div class="buttons">
+                    <button  class="prev-btn"  onclick="prevSlide()">Previous<i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="nxt-btn" onclick="nextSlide()">Next<i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="slide">
+                <img class="img1" src="images/irrcycle.png" alt="">
+                <label for="irrigation_cycles" class="crop-name" >Number of Irrigation Cycles</label>
+                <input type="number" id="irrigation_cycles" name="irrigation_cycles" placeholder="Enter the no of irrigation cycles" required >
+                <div class="buttons">
+                    <button  class="prev-btn"  onclick="prevSlide()">Previous<i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="nxt-btn" onclick="nextSlide()">Next<i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
+            </div>
+            <!-- Slide 7 -->
+            <div class="slide">
+                <img class="img1" src="images/field.png" alt="">
+                <label for="field_size" class="crop-name" >Field size</label>
+                <input type="number" id="field_size" name="field_size" placeholder="Enter the field size" required>
+                <select name="field_unit" class="yield-value" >
+                    <option value="acres">Field Size</option>
+                    <option value="acres">Acres</option>
+                    <option value="bighas">Bighas</option>
+                    <option value="katthas">Katthas</option>
+                </select>
+                <div class="buttons">
+                    <button  class="prev-btn"  onclick="prevSlide()">Previous<i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="nxt-btn" onclick="nextSlide()">Next<i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
+            </div>
+            <!-- Slide 8 -->
+            <div class="slide">
+                <img class="img1" src="images/growdays.png" alt="">
+                <label for="growing_season" class="crop-name" >Duration of Growing Season (days)</label>
+                <input type="number" id="growing_season" name="growing_season" placeholder=" Enter the duration of Growing Season" required>
+                <div class="buttons">
+                    <button  class="prev-btn"  onclick="prevSlide()">Previous<i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="nxt-btn"  onclick="nextSlide()">Next<i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
+            </div>
+            <!-- Slide 9 -->
+            <div class="slide">
+                <img class="img1" src="images/waterimg.png" alt="">
+                <label for="fertilizer_water" class="crop-name" >Water Used for Fertilizers/Pesticides (liters)</label>
+                <input type="number" id="fertilizer_water" name="fertilizer_water" placeholder="Enter the water used in litres" required>
+                <div class="buttons">
+                    <button  class="prev-btn"  onclick="prevSlide()">Previous<i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="nxt-btn" onclick="nextSlide()">Next<i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
+            </div>
+            <!-- Slide 10 -->
+            <div class="slide">
+                <img class="img1" src="images/end.png" alt="">
+                <div class="buttons">
+                     <button  class="prev-btn"  onclick="prevSlide()">Previous<i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="res-btn" onclick="restartSlider()">Reset <i class="bi bi-arrow-clockwise"></i></button>
+                    <button class="sub-btn" type="button" onclick="submitForm()">Calculate <i class="bi bi-calendar2-check-fill"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Result Modal -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('result-modal')">&times;</span>
+            <h1>Water Footprint Result</h1>
+            <div id="result-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1 id="info-title"></h1>
+            <p id="info-content"></p>
+        </div>
+    </div>
+
+    <script src="two.js"></script>
+</body>
+
+</html>

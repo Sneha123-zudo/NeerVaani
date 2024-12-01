@@ -1,0 +1,176 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Parkinsans:wght@300..800&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4e3d1;
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    /*background: #ffffff;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);*/
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+input, select, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width:250px ;
+}
+
+button {
+    background-color: #9b6033;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #583b25;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+.button1{
+    margin: auto;
+    width: 120px;
+    padding:15px 0px;
+}
+.crop-name{
+    margin-bottom: 20px;
+    color: #5a3d28;
+    font-size: 1rem;
+}
+.img1{
+    height: 200px;
+}
+#crop_name{
+    margin-bottom: 20px;
+}
+.bi-arrow-right-circle-fill{
+    margin-left: 10px;
+}
+.yield-value{
+    width: 100px;
+    padding: 10px;
+}
+#irrigation_type{
+    width: 200px;
+}
+#yield_value{
+    width: 170px;
+    padding: 10px;
+}
+#field_size{
+    width: 170px;
+    padding: 10px;
+}
+#rainfall{
+    width: 170px;
+    padding: 10px;
+}
+#temperature{
+    width: 220px;
+    padding: 10px;
+}
+.prev-btn{
+    width: 120px;
+    padding:15px 0px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.nxt-btn{
+    width: 120px;
+    padding:15px 0px;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+.bi-arrow-left-circle-fill{
+    margin-left: 10px;
+}
+.res-btn{
+    width: 120px;
+    padding:15px 0px;
+    margin-top: 20px;
+}
+.sub-btn{
+    width: 120px;
+    padding:15px 0px;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+.bi-arrow-clockwise{
+    margin-left: 10px
+}
+.bi-calendar2-check-fill{
+    margin-left: 10px
+}
