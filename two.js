@@ -39,9 +39,9 @@ function showInfoModal(title, content) {
 }
 
 // Close Modal
-function closeModal() {
-    document.getElementById('info-modal').style.display = 'none';
-}
+//function closeModal() {
+//    document.getElementById('info-modal').style.display = 'none';
+//}
 
 // Initialize the first slide
 updateSlides();
@@ -49,11 +49,11 @@ updateSlides();
 
 
 
-    function showInfoModal(title, content) {
-        document.getElementById('info-title').textContent = title;
-        document.getElementById('info-content').textContent = content;
-        document.getElementById('info-modal').style.display = 'block';
-    }
+   // function showInfoModal(title, content) {
+   //     document.getElementById('info-title').textContent = title;
+   //     document.getElementById('info-content').textContent = content;
+   //     document.getElementById('info-modal').style.display = 'block';
+   // }
 
     function closeModal(modalId) {
         document.getElementById(modalId).style.display = 'none';
