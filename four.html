@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden; /* Prevent body scrolling */
+        }
+        .laundry-container {
+            overflow-y: auto; /* Add vertical scrolling if content overflows */
+            text-align: center;
+        }
+        .method-selection {
+            margin-bottom: 20px;
+        }
+        .method-selection button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .method-selection button:hover {
+            background-color: #0056b3;
+        }
+        .tracker-box {
+            margin-top: 20px;
+        }
+        .adjust-section {
+            margin-bottom: 20px;
+        }
+        .adjust-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .control-btn {
+            padding: 5px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .control-btn:hover {
+            background-color: #0056b3;
+        }
+        .value-display {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="laundry-container">
+        <!-- Selection Section -->
+        <div class="method-selection">
+            <button onclick="selectLaundryMethod('machine')">Washing Machine</button>
+            <button onclick="selectLaundryMethod('bucket')">Bucket</button>
+        </div>
+
+        <!-- Tracker Box -->
+        <div id="tracker-box" class="tracker-box" style="display: none;">
+            <!-- Number of Loads or Buckets -->
+            <div class="adjust-section">
+                <div class="adjust-controls">
+                    <button class="control-btn" onclick="adjustNumber(-1)">-</button>
+                    <span class="value-display" id="number-display">1</span>
+                    <button class="control-btn" onclick="adjustNumber(1)">+</button>
+                    <span id="unit-display">BATHS PER</span>
+                </div>
+            </div>
+            <!-- Time Interval (Day, Month, Year) -->
+            <div class="adjust-section">
+                <div class="adjust-controls">
+                    <button class="control-btn" onclick="adjustInterval(-1)">-</button>
+                    <span class="value-display" id="interval-display">Day</span>
+                    <button class="control-btn" onclick="adjustInterval(1)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let laundryMethod = ''; // To store the selected method (machine or bucket)
+        const intervals = ["Day", "Month", "Year"];
+        let intervalIndex = 0;
+
+        // Function to handle laundry method selection
+        function selectLaundryMethod(method) {
+            laundryMethod = method;
+
+            const trackerBox = document.getElementById('tracker-box');
+            const unitDisplay = document.getElementById('unit-display');
+
+            // Update unit display based on the method
+            unitDisplay.textContent = method === 'machine' ? "LOADS PER" : "BUCKETS PER";
+
+            // Reset values
+            resetTracker();
+
+            // Show the tracker box
+            trackerBox.style.display = 'block';
+        }
+
+        // Function to adjust the number of loads/buckets
+        function adjustNumber(change) {
+            const numberDisplay = document.getElementById('number-display');
+            let currentValue = parseInt(numberDisplay.textContent);
+
+            // Prevent negative values
+            currentValue = Math.max(1, currentValue + change);
+
+            // Update the display
+            numberDisplay.textContent = currentValue;
+        }
+
+        // Function to adjust the time interval (Day, Month, Year)
+        function adjustInterval(change) {
+            intervalIndex = (intervalIndex + change + intervals.length) % intervals.length;
+            document.getElementById('interval-display').textContent = intervals[intervalIndex];
+        }
+
+        // Function to reset tracker values
+        function resetTracker() {
+            document.getElementById('number-display').textContent = 1;
+            intervalIndex = 0; // Reset to "Day"
+            document.getElementById('interval-display').textContent = intervals[intervalIndex];
+        }
+    </script>
+</body>
+</html>

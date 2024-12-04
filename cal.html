@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Slick Slider</title>
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="cal.css">
+</head>
+
+<body>
+    <div class="section">
+        <div class="slider-container">
+            <div class="slide">
+                <div class="house">
+                    <i class="bi bi-house-fill"></i>
+                    <span class="head-hs">household</span>
+                    <p>How many people are in your household?</p>
+                </div>
+                <div class="container">
+                    <div class="user-icons">
+                        <div class="user-icon fixed-user">
+                            <img src="images/person.png" alt="User Icon">
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button class="remove-btn" onclick="removeUser()">-</button>
+                        <button class="add-btn" onclick="addUser()">+</button>
+                    </div>
+                </div>
+                <button class="custom-btn next-slide">Next
+                    <img src="images/arrow-right.png" alt="">
+                </button>
+            </div>
+            <div class="slide">
+                <div class="bath">
+                    <img src="images/shower.png" alt="">
+                    <p>Shower</p>
+                </div>
+                <div class="shower2">
+                    <img src="images/shower-per.png" alt="">
+                    <p>How long is the average shower in your household?</p>
+                </div>
+                <div class="buttons">
+                    <button class="custom-btn mins">UNDER 5 MIN</button>
+                    <button class="custom-btn mins">5-10 MIN</button>
+                    <button class="custom-btn mins">11-15 MIN</button>
+                    <button class="custom-btn mins">Over 15 MIN</button>
+                </div>
+                <div class="buttons2">
+                    <button class="custom-btn prev-slide">Previous
+                        <img src="images/left-chevron.png" alt="">
+                    </button>
+                    <button class="custom-btn next-slide">Next
+                        <img src="images/arrow-right.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="bath">
+                    <img src="images/bathtub.png" alt="">
+                    <p>Bathtub</p>
+                </div>
+                <div class="bath2">
+                    <img src="images/bath.png" alt="">
+                    <p>Do you take baths? If so, how often?</p>
+                </div>
+                <div class="tracker-box">
+                    <div class="adjust-section">
+                        <div class="adjust-controls">
+                            <button class="control-btn" onclick="adjustNumber(-1)">-</button>
+                            <span class="value-display" id="number-display">1</span>
+                            <button class="control-btn" onclick="adjustNumber(1)">+</button>
+                            <span>BATHS PER</span>
+                        </div>
+                    </div>
+                    <div class="adjust-section">
+                        <div class="adjust-controls">
+                            <button class="control-btn" onclick="adjustInterval(-1)">-</button>
+                            <span class="value-display" id="interval-display">Day</span>
+                            <button class="control-btn" onclick="adjustInterval(1)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons2">
+                    <button class="custom-btn prev-slide">Previous
+                        <img src="images/left-chevron.png" alt="">
+                    </button>
+                    <button class="custom-btn next-slide">Next
+                        <img src="images/arrow-right.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="bath">
+                    <img src="images/basin.png" alt="">
+                    <p>Bathroom Sink</p>
+                </div>
+                <div class="bath2">
+                    <img src="images/sink.png" alt="">
+                    <p>How long do you leave your bathroom faucets running each day?</p>
+                </div>
+                <div class="buttons">
+                    <button class="custom-btn mins">UNDER 5 MIN</button>
+                    <button class="custom-btn mins">5-10 MIN</button>
+                    <button class="custom-btn mins">11-30 MIN</button>
+                    <button class="custom-btn mins">Over 30 MIN</button>
+                </div>
+                <div class="buttons2">
+                    <button class="custom-btn prev-slide">Previous
+                        <img src="images/left-chevron.png" alt="">
+                    </button>
+                    <button class="custom-btn next-slide">Next
+                        <img src="images/arrow-right.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="bath">
+                    <img src="images/basin.png" alt="">
+                    <p>Kitchen Sink</p>
+                </div>
+                <div class="bath2">
+                    <img src="images/kitchen-sink.png" alt="">
+                    <p>How long do you leave the kitchen faucet running each day?</p>
+                </div>
+                <div class="buttons">
+                    <button class="custom-btn mins">UNDER 5 MIN</button>
+                    <button class="custom-btn mins">5-20 MIN</button>
+                    <button class="custom-btn mins">21-45 MIN</button>
+                    <button class="custom-btn mins">Over 45 MIN</button>
+                </div>
+                <div class="buttons2">
+                    <button class="custom-btn prev-slide">Previous
+                        <img src="images/left-chevron.png" alt="">
+                    </button>
+                    <button class="custom-btn next-slide">Next
+                        <img src="images/arrow-right.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="bath">
+                    <img src="images/washing-machine.png" alt="">
+                    <p>Laundry</p>
+                </div>
+                <div class="bath2">
+                    <img src="images/laundry.png" alt="">
+                    <p>How you do laundry in washing machine?</p>
+                </div>
+                <div class="tracker-box">
+                    <div class="adjust-section">
+                        <div class="adjust-controls">
+                            <button class="control-btn" onclick="adjustNumber(-1)">-</button>
+                            <span class="value-display" id="number-display">1</span>
+                            <button class="control-btn" onclick="adjustNumber(1)">+</button>
+                            <span>LOADS PER</span>
+                        </div>
+                    </div>
+                    <div class="adjust-section">
+                        <div class="adjust-controls">
+                            <button class="control-btn" onclick="adjustInterval(-1)">-</button>
+                            <span class="value-display" id="interval-display">Day</span>
+                            <button class="control-btn" onclick="adjustInterval(1)">+</button>
+                        </div>
+                    </div>
+                </div>
+             <div class="buttons2">
+                    <button class="custom-btn prev-slide">Previous
+                        <img src="images/left-chevron.png" alt="">
+                    </button>
+                    <button class="custom-btn next-slide">Next
+                        <img src="images/arrow-right.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="bath">
+                    <img src="images/bucket.png" alt="">
+                    <p>Laundry</p>
+                </div>
+                <div class="bath2">
+                    <img src="images/laundry-bucket.png" alt="">
+                    <p>How much buckets you need to do laundry?</p>
+                </div>
+                <div class="tracker-box">
+                    <div class="adjust-section">
+                        <div class="adjust-controls">
+                            <button class="control-btn" onclick="adjustNumber(-1)">-</button>
+                            <span class="value-display" id="number-display">1</span>
+                            <button class="control-btn" onclick="adjustNumber(1)">+</button>
+                            <span>BUCKETS PER</span>
+                        </div>
+                    </div>
+                    <div class="adjust-section">
+                        <div class="adjust-controls">
+                            <button class="control-btn" onclick="adjustInterval(-1)">-</button>
+                            <span class="value-display" id="interval-display">Day</span>
+                            <button class="control-btn" onclick="adjustInterval(1)">+</button>
+                        </div>
+                    </div>
+                </div>
+             <div class="buttons2">
+                    <button class="custom-btn prev-slide">Previous
+                        <img src="images/left-chevron.png" alt="">
+                    </button>
+                    <button class="custom-btn next-slide">Next
+                        <img src="images/arrow-right.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="cal.js"></script>
+</body>
+
+</html>
