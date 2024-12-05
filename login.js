@@ -1,10 +1,11 @@
-// JavaScript to toggle between login and signup forms
-document.getElementById("switchToSignup").addEventListener("click", () => {
-  document.getElementById("loginForm").classList.add("hidden");
-  document.getElementById("signupForm").classList.remove("hidden");
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
+
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
 });
 
-document.getElementById("switchToLogin").addEventListener("click", () => {
-  document.getElementById("signupForm").classList.add("hidden");
-  document.getElementById("loginForm").classList.remove("hidden");
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
 });

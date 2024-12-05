@@ -154,23 +154,25 @@
                     <img src="images/laundry.png" alt="">
                     <p>How you do laundry in washing machine?</p>
                 </div>
-                <div class="tracker-box">
-                    <div class="adjust-section">
-                        <div class="adjust-controls">
-                            <button class="control-btn" onclick="adjustNumber(-1)">-</button>
-                            <span class="value-display" id="number-display">1</span>
-                            <button class="control-btn" onclick="adjustNumber(1)">+</button>
-                            <span>LOADS PER</span>
+                <div class="laundry-tracker">
+                    <div class="laundry-load-section">
+                        <div class="load-settings">
+                            <button class="decrease-load" onclick="modifyLoad(-1)">-</button>
+                            <span class="current-load" id="current-load-value">1</span> <!-- Updated ID -->
+                            <button class="increase-load" onclick="modifyLoad(1)">+</button>
+                            <span class="load-unit">LOADS PER</span>
                         </div>
                     </div>
-                    <div class="adjust-section">
-                        <div class="adjust-controls">
-                            <button class="control-btn" onclick="adjustInterval(-1)">-</button>
-                            <span class="value-display" id="interval-display">Day</span>
-                            <button class="control-btn" onclick="adjustInterval(1)">+</button>
+                    <div class="laundry-interval-section">
+                        <div class="interval-settings">
+                            <button class="decrease-interval" onclick="changeInterval(-1)">-</button>
+                            <span class="current-interval" id="current-interval-label">Day</span> <!-- Updated ID -->
+                            <button class="increase-interval" onclick="changeInterval(1)">+</button>
                         </div>
                     </div>
                 </div>
+                
+                
              <div class="buttons2">
                     <button class="custom-btn prev-slide">Previous
                         <img src="images/left-chevron.png" alt="">
@@ -189,23 +191,24 @@
                     <img src="images/laundry-bucket.png" alt="">
                     <p>How much buckets you need to do laundry?</p>
                 </div>
-                <div class="tracker-box">
-                    <div class="adjust-section">
-                        <div class="adjust-controls">
-                            <button class="control-btn" onclick="adjustNumber(-1)">-</button>
-                            <span class="value-display" id="number-display">1</span>
-                            <button class="control-btn" onclick="adjustNumber(1)">+</button>
-                            <span>BUCKETS PER</span>
+                <div class="bucket-tracker">
+                    <div class="bucket-adjust">
+                        <div class="bucket-controls">
+                            <button class="bucket-btn" onclick="updateBuckets(-1)">-</button>
+                            <span class="bucket-display" id="bucket-count">1</span>
+                            <button class="bucket-btn" onclick="updateBuckets(1)">+</button>
+                            <span class="bucket-label">BUCKETS PER</span>
                         </div>
                     </div>
-                    <div class="adjust-section">
-                        <div class="adjust-controls">
-                            <button class="control-btn" onclick="adjustInterval(-1)">-</button>
-                            <span class="value-display" id="interval-display">Day</span>
-                            <button class="control-btn" onclick="adjustInterval(1)">+</button>
+                    <div class="interval-adjust">
+                        <div class="interval-controls">
+                            <button class="interval-btn" onclick="updateInterval(-1)">-</button>
+                            <span class="interval-display" id="interval-label">Day</span>
+                            <button class="interval-btn" onclick="updateInterval(1)">+</button>
                         </div>
                     </div>
                 </div>
+                
              <div class="buttons2">
                     <button class="custom-btn prev-slide">Previous
                         <img src="images/left-chevron.png" alt="">

@@ -81,3 +81,51 @@ function adjustInterval(change) {
 }
 
 
+//BUCKETS 
+
+let bucketCount = 1; // Initial number of buckets
+let currentInterval = "Day"; // Initial interval
+
+// Function to update bucket count
+function updateBuckets(change) {
+    bucketCount += change;
+    if (bucketCount < 1) bucketCount = 1; // Prevent going below 1
+    document.getElementById("bucket-count").innerText = bucketCount;
+}
+
+// Function to update interval
+function updateInterval(change) {
+    const intervals = ["Day", "Week", "Month"];
+    const intervalLabel = document.getElementById("interval-label");
+    let currentIndex = intervals.indexOf(currentInterval);
+
+    // Adjust the index and ensure it wraps around the list
+    currentIndex = (currentIndex + change + intervals.length) % intervals.length;
+    currentInterval = intervals[currentIndex];
+    intervalLabel.innerText = currentInterval;
+}
+
+
+// Washing Machine
+
+let loadCount = 1;  // Initial load count
+let currentInterval2 = "Day";  // Initial interval
+
+// Function to modify the load count
+function modifyLoad(change) {
+    loadCount += change;
+    if (loadCount < 1) loadCount = 1;  // Prevent load count from going below 1
+    document.getElementById("current-load-value").innerText = loadCount;  // Update the displayed load count
+}
+
+// Function to change the interval
+function changeInterval(change) {
+    const intervals = ["Hour", "Day", "Week", "Month"];
+    const intervalElement = document.getElementById("current-interval-label");
+    let currentIndex = intervals.indexOf(currentInterval2);
+
+    // Adjust the index and ensure it wraps around
+    currentIndex = (currentIndex + change + intervals.length) % intervals.length;
+    currentInterval2 = intervals[currentIndex];
+    intervalElement.innerText = currentInterval2;  // Update the displayed interval
+}

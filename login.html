@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login & Signup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="login.css">
+  <title>NeerVaani</title>
+  <link rel="shortcut icon" href="images/Neer logo.png" type="image/x-icon">
 </head>
+
 <body>
-  <div class="container">
-    <div class="form-container">
-      <!-- Login Form -->
-      <form class="form" id="loginForm">
-        <h2>Login</h2>
-        <label for="loginEmail">Email</label>
-        <input type="email" id="loginEmail" placeholder="Enter your email" required>
-        <label for="loginPassword">Password</label>
-        <input type="password" id="loginPassword" placeholder="Enter your password" required>
-        <button type="submit" class="btn">Login</button>
 
-        <!-- Divider for social login -->
-        <div class="divider">or</div>
-
-        <!-- Social Login Buttons -->
-        <button type="button" class="social-btn google-btn">Continue with Google</button>
-
-        <p class="switch">Don't have an account? <a href="#" id="switchToSignup">Signup</a></p>
-      </form>
-
-      <!-- Signup Form -->
-      <form class="form hidden" id="signupForm">
-        <h2>Signup</h2>
-        <label for="signupName">Name</label>
-        <input type="text" id="signupName" placeholder="Enter your name" required>
-        <label for="signupEmail">Email</label>
-        <input type="email" id="signupEmail" placeholder="Enter your email" required>
-        <label for="signupPassword">Password</label>
-        <input type="password" id="signupPassword" placeholder="Create a password" required>
-        <button type="submit" class="btn">Signup</button>
-
-        <!-- Divider for social signup -->
-        <div class="divider">or</div>
-
-        <!-- Social Signup Buttons -->
-        <button type="button" class="social-btn google-btn">Signup with Google</button>
-
-        <p class="switch">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+  <div class="container" id="container">
+    <div class="form-container sign-up">
+      <form>
+        <h1>Sign Up</h1>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <div class="user-det">
+          <p>User Type</p>
+          <select name="type_of_user" id="type_of_user">
+            <option value="farmer">Farmer</option>
+            <option value="organization">Organization</option>
+            <option value="normal user">Normal User</option>
+          </select>
+        </div>
+        <input type="text" id="city" name="city" placeholder="City" >
+        <input type="text" id="state" name="state" placeholder="State" >
+        <div class="imp-det">
+        <input type="text" id="pincode" name="pincode" placeholder="Pincode">
+        <input type="password" placeholder="Password">
+        </div>
+        <button>Sign Up</button>
       </form>
     </div>
+    <div class="form-container sign-in">
+      <form>
+        <h1>Sign In</h1>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <a href="#">Forget Your Password?</a>
+        <button>Sign In</button>
+      </form>
+    </div>
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-left">
+          <h1>Welcome Back!</h1>
+          <p>Enter your personal details to use all of site features</p>
+          <button class="hidden" id="login">Sign In</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <h1>Hello, Friend!</h1>
+          <p>Register with your personal details to use all of site features</p>
+          <button class="hidden" id="register">Sign Up</button>
+        </div>
+      </div>
+    </div>
   </div>
+
   <script src="login.js"></script>
 </body>
+
 </html>

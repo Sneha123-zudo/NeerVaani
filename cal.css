@@ -280,3 +280,112 @@ html{
 }
 
 
+
+.bucket-tracker {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bucket-adjust,
+.interval-adjust {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bucket-controls,
+.interval-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bucket-btn,
+.interval-btn {
+    padding: 5px 10px;
+    border: 1px solid #1e3e60;
+    background-color: #1e3e60;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.bucket-btn:hover,
+.interval-btn:hover {
+    background-color: #0d2238;
+}
+
+.bucket-display,
+.interval-display {
+    min-width: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(17, 128, 128);
+    font-weight: bold;
+}
+
+.bucket-label {
+    font-size: 1.2rem;
+    color: rgb(17, 128, 128);
+    font-weight: bold;
+}
+
+
+.laundry-tracker {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.laundry-load-section,
+.laundry-interval-section {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.load-settings,
+.interval-settings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.decrease-load,
+.increase-load,
+.decrease-interval,
+.increase-interval {
+    padding: 8px 12px;
+    border: 1px solid #1e3e60;
+    background-color: #1e3e60;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.decrease-load:hover,
+.increase-load:hover,
+.decrease-interval:hover,
+.increase-interval:hover {
+    background-color: #0d2238;
+}
+
+.current-load,
+.current-interval {
+    min-width: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(17, 128, 128);
+    font-weight: bold;
+}
+
+.load-unit {
+    font-size: 1.2rem;
+    color: rgb(17, 128, 128);
+    font-weight: bold;
+}
