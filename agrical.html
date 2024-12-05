@@ -1,13 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeerVaani</title>
     <link rel="shortcut icon" href="images/Neer logo.png" type="image/x-icon">
     <link rel="stylesheet" href="agrical.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        /* Body Styling */
+
+        /* Slider Container */
+        .slider-container {
+            width: 100%;
+        }
+
+        /* Individual Slides */
+        .slide {
+            text-align: center;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            height: 550px;
+        }
+
+        .slide h2 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .slide p {
+            color: #666;
+        }
+
+        /* Custom Buttons */
+        .custom-btn {
+            display: inline-block;
+            margin: 20px 5px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .custom-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Slick Dots Styling */
+        .slick-dots li button:before {
+            color: #007bff;
+            font-size: 12px;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #0056b3;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="section">
+        <div class="slider-container">
+            <div class="slide">
+                <div class="cal-part1">
+                    <img src="images/corn.png" alt="">
+                    <p>Crop Name</p>
+                </div>
+                <div class="cal-part2">
+                    <img src="images/crop-name1.png" alt="">
+                    <p>What is the crop name?</p>
+                </div>
+                <div class="name-input">
+                    <input type="text" id="cropName" name="crop_name" class="styled-input" required>
+
+                </div>
+                <button class="custom-btn next-slide">
+                    <img src="images/arrow-right.png" alt="">
+                </button>
+            </div>
+            <div class="slide">
+                <div class="cal-part1">
+                    <img src="images/farmhouse.png" alt="">
+                    <p>Land size</p>
+                </div>
+                <div class="land-size">
+                    <img src="images/land-size.png" alt="">
+                    <p>What is the size of land?</p>
+                </div>
+                <div class="buttons">
+                    <button class="custom-btn mins">Katha</button>
+                    <button class="custom-btn mins">Bigha</button>
+                    <button class="custom-btn mins">Acre</button>
+                </div>
+                <button class="custom-btn prev-slide"><img src="images/left-chevron.png" alt=""></button>
+                <button class="custom-btn next-slide"><img src="images/arrow-right.png" alt=""></button>
+            </div>
+            <div class="slide">
+                <div class="cal-part1">
+                    <img src="images/agriculture.png" alt="">
+                    <p>Irrigation Method</p>
+                </div>
+                <div class="land-size">
+                    <img src="images/irrigation.png" alt="">
+                    <p>What type of irrigation method is used?</p>
+                </div>
+                <div class="buttons">
+                    <button class="custom-btn mins">Flood</button>
+                    <button class="custom-btn mins">Drip</button>
+                    <button class="custom-btn mins">Sprinkler</button>
+                    <button class="custom-btn mins">Surface</button>
+                    <button class="custom-btn mins">Center Pivot</button>
+                </div>
+                <button class="custom-btn prev-slide"><img src="images/left-chevron.png" alt=""></button>
+                <button class="custom-btn next-slide"><img src="images/arrow-right.png" alt=""></button>
+            </div>
+            <div class="slide">
+                <div class="cal-part1">
+                    <img src="images/season (1).png" alt="">
+                    <p>Growing Season</p>
+                </div>
+                <div class="land-size">
+                    <img src="images/season-farm.png" alt="">
+                    <p>Type of growing season?</p>
+                </div>
+                <div class="buttons">
+                    <button class="custom-btn mins">Summer</button>
+                    <button class="custom-btn mins">Winter</button>
+                    <button class="custom-btn mins">Monsoon</button>
+                </div>
+                <button class="custom-btn prev-slide"><img src="images/left-chevron.png" alt=""></button>
+                <button class="custom-btn next-slide"><img src="images/arrow-right.png" alt=""></button>
+            </div>
+            <div class="slide">
+                <div class="cal-part1">
+                    <img src="images/rainfall (1).png" alt="">
+                    <p>Rainfall</p>
+                </div>
+                <div class="land-size">
+                    <img src="images/rainfall-farm.png" alt="">
+                    <p>Rainfall required in (mm)?</p>
+                </div>
+                <div class="number-box">
+                    <input type="number" step="0.01" id="rainfall" name="rainfall" class="styled-number-input" required>
+                </div>
+                <button class="custom-btn prev-slide"><img src="images/left-chevron.png" alt=""></button>
+                <button class="custom-btn next-slide"><img src="images/arrow-right.png" alt=""></button>
+            </div>
+            <div class="slide">
+                <div class="cal-part1">
+                    <img src="images/fertilizer.png" alt="">
+                    <p>Fertilizer Usage</p>
+                </div>
+                <div class="land-size">
+                    <img src="images/fertilizer-farm.png" alt="">
+                    <p>Fertilizer Usage in (kg/acre)?</p>
+                </div>
+                <div class="number-box">
+                    <input type="number" step="0.01" id="fertilizerUsage" name="fertilizer_usage" class="styled-number-input" required>
+                </div>
+                <button class="custom-btn prev-slide"><img src="images/left-chevron.png" alt=""></button>
+                <button class="custom-btn next-slide"><img src="images/arrow-right.png" alt=""></button>
+            </div>
+            <div class="slide">
+                <div class="cal-part1">
+                    <img src="images/crops-analytics.png" alt="">
+                    <p>Crop Yield</p>
+                </div>
+                <div class="land-size">
+                    <img src="images/crop-yeild.png" alt="">
+                    <p>What is Crop Yield in (kg/acre)?</p>
+                </div>
+                <div class="number-box">
+                    <input type="number" step="0.01" id="cropYield" name="crop_yield" class="styled-number-input"  required>
+                </div>
+                <button class="custom-btn prev-slide"><img src="images/left-chevron.png" alt=""></button>
+                <button class="custom-btn next-slide"><img src="images/arrow-right.png" alt=""></button>
+            </div>
+            <div class="slide">
+                <div class="cal-part1">
+                    <img src="images/high-temperature.png" alt="">
+                    <p>Temperature</p>
+                </div>
+                <div class="land-size">
+                    <img src="images/temp-farm.png" alt="">
+                    <p>What is the temperature in (°C)?</p>
+                </div>
+                <div class="number-box">
+                    <input type="number" step="0.01" id="temperature" name="temperature" class="styled-number-input"  required>
+                </div>
+                <button class="custom-btn prev-slide"><img src="images/left-chevron.png" alt=""></button>
+                <button class="custom-btn next-slide"><img src="images/arrow-right.png" alt=""></button>
+            </div>
+            <div class="slide">
+                <div class="cal-part1">
+                    <img src="images/water (1).png" alt="">
+                    <p>Irrigation Cycles</p>
+                </div>
+                <div class="land-size">
+                    <img src="images/irrigation-farm.png" alt="">
+                    <p>What are the number of irrigation cycles?</p>
+                </div>
+                <div class="number-box">
+                    <input type="number" step="0.01" id="temperature" name="temperature" class="styled-number-input"  required>
+                </div>
+                <button class="custom-btn prev-slide"><img src="images/left-chevron.png" alt=""></button>
+                <button class="custom-btn next-slide"><img src="images/arrow-right.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const $slider = $('.slider-container');
+
+            // Initialize Slick Slider
+            $slider.slick({
+                dots: true,          // Enable pagination dots
+                infinite: false,     // Stop looping
+                speed: 600,          // Smooth transition speed
+                slidesToShow: 1,     // Show one slide at a time
+                slidesToScroll: 1,   // Scroll one slide at a time
+                arrows: false,       // Hide default arrows
+                draggable: false     // Disable swipe to prioritize button navigation
+            });
+
+            // Handle "Next" button
+            $(document).on('click', '.next-slide', function () {
+                $slider.slick('slickNext');
+            });
+
+            // Handle "Previous" button
+            $(document).on('click', '.prev-slide', function () {
+                $slider.slick('slickPrev');
+            });
+        });
+    </script>
 </body>
+
 </html>

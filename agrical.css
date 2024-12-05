@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Parkinsans:wght@300..800&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Parkinsans", sans-serif;
+}
+.slide .custom-btn {
+    display: inline-block;
+    margin: 20px 20px;
+    padding: 10px 20px;
+    background-color: #1e3e60;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  .next-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.next-slide img{
+    width: 30px;
+}
+.prev-slide{
+    margin-left: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 70px;
+}
+.prev-slide img{
+    width: 25px;
+}
+.cal-part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.cal-part1 img{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+.slide .cal-part1 p{
+    font-size: 1.2rem;
+    color: rgb(44, 94, 32);
+    font-weight: 600;
+}
+.cal-part2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cal-part2 img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+.slide .cal-part2 p{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: rgb(121, 48, 48);
+    font-weight: bold;
+}
+.styled-input {
+    width: 30%;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.styled-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+.styled-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.styled-input:hover {
+    border-color: #007bff;
+}
+.mins{
+    margin: 0px;
+   padding: 15px 20px;
+   font-size: 12px;
+   margin: 10px 20px;
+   margin-bottom: 30px;
+}
+.mins:hover{
+    background-color:#1e3e60 ;
+}
+.land-size{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slide .land-size img{
+    width: 300px;
+    height: 200px;
+}
+.slide .land-size p{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: rgb(121, 48, 48);
+    font-weight: bold;
+}
+.styled-number-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.styled-number-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.styled-number-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+.styled-number-input:hover {
+    border-color: #007bff;
+}
+
+/* Remove spinners in Webkit browsers (Chrome, Safari) */
+.styled-number-input::-webkit-inner-spin-button,
+.styled-number-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+.styled-number-input[type=number] {
+    -moz-appearance: textfield; /* Removes spinners in Firefox */
+}
+
+/* Style the container for the spinner buttons */
+.styled-number-input::-webkit-outer-spin-button,
+.styled-number-input::-webkit-inner-spin-button {
+    background-color: transparent; /* Maintain transparent background for better UI */
+    width: 20px; /* Limit the width of the spinner button */
+    height: 20px; /* Limit the height of the spinner button */
+}

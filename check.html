@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Roboto', sans-serif;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .info-btn {
+            background: none;
+            border: none;
+            color: #007bff;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 5px;
+        }
+        .info-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center mb-4">Crop Information Form</h2>
+            <form id="cropForm">
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                    <label for="cropName" class="form-label">Crop Name</label>
+                    <input type="text" id="cropName" name="crop_name" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="landSize" class="form-label">Land Size</label>
+                    <div class="input-group">
+                        <input type="number" step="0.01" id="landSize" name="land_size" class="form-control" required>
+                        <select name="land_unit" class="form-select">
+                            <option value="katha">Katha</option>
+                            <option value="bigha">Bigha</option>
+                            <option value="acre">Acre</option>
+                        </select>
+                    </div>
+                    <button type="button" class="info-btn" onclick="showInfo('Land size refers to the area of land under cultivation.')">i</button>
+                </div>
+
+                <div class="mb-3">
+                    <label for="irrigationMethod" class="form-label">Irrigation Method</label>
+                    <select id="irrigationMethod" name="irrigation_method" class="form-select">
+                        <option value="flood">Flood Irrigation</option>
+                        <option value="drip">Drip Irrigation</option>
+                        <option value="sprinkler">Sprinkler Irrigation</option>
+                        <option value="surface">Surface Irrigation</option>
+                        <option value="center_pivot">Center Pivot Irrigation</option>
+                    </select>
+                    <button type="button" class="info-btn" onclick="showInfo('Irrigation methods vary in efficiency and water usage.')">i</button>
+                </div>
+
+                <div class="mb-3">
+                    <label for="growingSeason" class="form-label">Growing Season</label>
+                    <select id="growingSeason" name="growing_season" class="form-select">
+                        <option value="summer">Summer</option>
+                        <option value="winter">Winter</option>
+                        <option value="monsoon">Monsoon</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="rainfall" class="form-label">Rainfall (mm)</label>
+                    <input type="number" step="0.01" id="rainfall" name="rainfall" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="fertilizerUsage" class="form-label">Fertilizer Usage (kg/acre)</label>
+                    <input type="number" step="0.01" id="fertilizerUsage" name="fertilizer_usage" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="cropYield" class="form-label">Crop Yield (kg/acre)</label>
+                    <input type="number" step="0.01" id="cropYield" name="crop_yield" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="temperature" class="form-label">Temperature (°C)</label>
+                    <input type="number" step="0.01" id="temperature" name="temperature" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="irrigationCycles" class="form-label">Irrigation Cycles</label>
+                    <input type="number" step="1" id="irrigationCycles" name="irrigation_cycles" class="form-control" required>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Calculate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showInfo(message) {
+            alert(message);
+        }
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
