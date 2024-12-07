@@ -261,8 +261,64 @@ html{
     height: 500px;
   }
 
-  /*FOOTER SECTION*/
+.section-about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  height: 700px;
+  background-image:url(images/about-bg.jpg);
+}
+.water_aboutimg img{
+  width: 500px;
+  height: 500px;
+  border-radius: 30px;
+}
+.head-content{
+  display: flex;
+  margin-right: 500px;
+}
+.head-content p{
+  color: #127417;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.section-about h2{
+  color: #0f3e8e;
+  margin-bottom: 20px;
+}
+.head-content img{
+  height: 20px;
+}
+.neer-para p{
+  width: 600px;
+  font-size: 15px;
+  color: #0e2550;
+  margin-bottom: 40px;
+}
+.obj-title{
+  display: flex;
 
+}
+.obj-title img{
+  height: 40px;
+  margin-right: 10px;
+
+}
+.obj-title h4{
+  font-weight: 500;
+  color: #496497;
+  margin-bottom: 30px;
+}
+.obj1{
+  margin-top: 20px;
+}
+.obj1 p{
+  width: 600px;
+  font-size: 15px;
+  color: #0e2550;
+}
 /* Footer Section */
 .footer {
     background-color: #f6fdfb; /* Light pastel green */
