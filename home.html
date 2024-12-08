@@ -62,23 +62,21 @@
             <div class="neer-para">
                 <p>Your one-stop platform for tracking water footprints and promoting sustainable water use. Discover
                     your water consumption, optimize agricultural practices, and make informed choices for a water-smart
-                    future</p>
+                    future.</p>
 
             </div>
             <div class="obj">
                 <div class="obj1">
                     <div class="obj-title">
-                        <img src="images/empowerment.png" alt="">
                         <h4>Empowering Users</h4>
                     </div>
-                    <p> Help individuals and farmers track water footprints and adopt efficient practices</p>
+                    <p> Help individuals and farmers track water footprints and adopt efficient practices.</p>
                 </div>
                 <div class="obj1">
                     <div class="obj-title">
-                        <img src="images/earth (1).png" alt="">
                         <h4>Promoting Sustainability</h4>
                     </div>
-                    <p>Offer insights and recommendations for responsible water management and agriculture
+                    <p>Offer insights and recommendations for responsible water management and agriculture.
                     </p>
                 </div>
             </div>
@@ -102,6 +100,7 @@
                 </p>
             </div>
         </div>
+
         <div class="section">
             <div class="icon">
                 <img src="images/process-icon2.png" alt="" />
@@ -135,6 +134,56 @@
             </div>
         </div>
     </div>
+
+
+    <div class="timeline-feat">
+        <h2>Our Features</h2>
+        <p>Empowering you with smart tools to track water usage, explore regional insights,<br> and adopt sustainable agricultural practices. Dive into the world of water-conscious living today!</p>
+    </div>
+    <div class="timeline-section">
+        <div class="timeline">
+          <div class="container-timeline left">
+            <div class="content-timeline">
+              <h3>Track Your Water Footprint</h3>
+              <p>Uncover your personal water usage with ease! Answer a few quick questions about your daily routine and discover how much water you consume. Take the first step toward a sustainable lifestyle!</p>
+            </div>
+          </div>
+          <div class="container-timeline right">
+            <div class="content-timeline">
+              <h3>Explore the Water Footprint of Every Agricultural Product</h3>
+              <p>Find out how much water goes into the products you consume! Scan or enter the name of any agricultural product to reveal its water footprint</p>
+            </div>
+          </div>
+          <div class="container-timeline left">
+            <div class="content-timeline">
+              <h3>Regional Water Insights</h3>
+              <p>Get detailed reports on your water usage and explore surface and groundwater availability in your region to make informed, sustainable choices</p>
+            </div>
+          </div>
+          <div class="container-timeline right">
+            <div class="content-timeline">
+              <h3>Smart Crop Recommendations</h3>
+              <p>Get tailored crop suggestions based on your region's water, soil, and climate to ensure the best growth and long-term sustainability</p>
+            </div>
+          </div>
+          <div class="container-timeline left">
+            <div class="content-timeline">
+              <h3>Sustainable Farming Practices</h3>
+              <p>Discover eco-friendly farming techniques that boost water efficiency and increase productivity, ensuring long-term agricultural success</p>
+            </div>
+          </div>
+          <div class="container-timeline right">
+            <div class="content-timeline">
+              <h3>Multilingual Support</h3>
+              <p>Accessible in multiple regional languages for ease of use across India</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+
+
     <section class="contact-section">
         <div class="contact-form-container">
             <h2>Contact Us</h2>
@@ -201,6 +250,28 @@
         </div>
     </footer>
 
+    <script>
+        // Function to reveal elements on scroll
+        function reveal() {
+          const containers = document.querySelectorAll('.container-timeline');
+          const windowHeight = window.innerHeight;
+        
+          containers.forEach(container => {
+            const elementTop = container.getBoundingClientRect().top;
+            const elementBottom = container.getBoundingClientRect().bottom;
+            const elementVisible = 150; // Threshold before it becomes visible
+        
+            if (elementTop < windowHeight - elementVisible && elementBottom > 0) {
+              container.classList.add('active');
+            } else {
+              container.classList.remove('active');
+            }
+          });
+        }
+        
+        // Listen for scroll event
+        window.addEventListener('scroll', reveal);
+        </script>
 </body>
 
 </html>

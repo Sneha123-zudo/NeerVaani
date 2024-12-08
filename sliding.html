@@ -1,23 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slick Slider</title>
-  <link rel="stylesheet" href="slider.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Parkinsans:wght@300..800&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+
+.timeline-section{
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* The timeline */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #303c53;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container-timeline {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Animation starting position */
+  transition: all 0.6s ease-out; /* Smooth animation */
+}
+
+.container-timeline.active {
+  opacity: 1; /* Visible */
+  transform: translateY(0); /* Final position */
+}
+
+.container-timeline::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #162537;
+  border: 4px solid #2c4461;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content-timeline {
+  padding: 20px 30px;
+  background-color: #303c53;
+  position: relative;
+  border-radius: 6px;
+}
+.content-timeline h3{
+  color: rgb(233, 235, 241);
+}
+.content-timeline p{
+  color: rgb(233, 235, 241);
+}
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .container-timeline{
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .container-timeline::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  .right {
+    left: 0%;
+  }
+}
+</style>
 </head>
 <body>
-  <div class="card-slider-container">
-    <div class="card-sliding">
-      <div class="slider-card">
-        
-      </div>
-      <div class="slider-card">Card 2</div>
-      <div class="slider-card">Card 3</div>
-      <div class="slider-card">Card 4</div>
-      <div class="slider-card">Card 5</div>
+<div class="timeline-section">
+<div class="timeline">
+  <div class="container-timeline left">
+    <div class="content-timeline">
+      <h3>Track Your Water Footprint</h3>
+      <p>Uncover your personal water usage with ease! Answer a few quick questions about your daily routine and discover how much water you consume. Take the first step toward a sustainable lifestyle!</p>
     </div>
   </div>
-  <script src="slider.js"></script>
+  <div class="container-timeline right">
+    <div class="content-timeline">
+      <h3>Explore the Water Footprint of Every Agricultural Product</h3>
+      <p>Find out how much water goes into the products you consume! Scan or enter the name of any agricultural product to reveal its water footprint.</p>
+    </div>
+  </div>
+  <div class="container-timeline left">
+    <div class="content-timeline">
+      <h3>Regional Water Insights</h3>
+      <p>Get detailed reports on your water usage and explore surface and groundwater availability in your region to make informed, sustainable choices.</p>
+    </div>
+  </div>
+  <div class="container-timeline right">
+    <div class="content-timeline">
+      <h3>Smart Crop Recommendations</h3>
+      <p>Get tailored crop suggestions based on your region's water, soil, and climate to ensure the best growth and long-term sustainability</p>
+    </div>
+  </div>
+  <div class="container-timeline left">
+    <div class="content-timeline">
+      <h3>Sustainable Farming Practices</h3>
+      <p>Discover eco-friendly farming techniques that boost water efficiency and increase productivity, ensuring long-term agricultural success.</p>
+    </div>
+  </div>
+  <div class="container-timeline right">
+    <div class="content-timeline">
+      <h3>Multilingual Support</h3>
+      <p>Accessible in multiple regional languages for ease of use across India</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+// Function to reveal elements on scroll
+function reveal() {
+  const containers = document.querySelectorAll('.container-timeline');
+  const windowHeight = window.innerHeight;
+
+  containers.forEach(container => {
+    const elementTop = container.getBoundingClientRect().top;
+    const elementBottom = container.getBoundingClientRect().bottom;
+    const elementVisible = 150; // Threshold before it becomes visible
+
+    if (elementTop < windowHeight - elementVisible && elementBottom > 0) {
+      container.classList.add('active');
+    } else {
+      container.classList.remove('active');
+    }
+  });
+}
+
+// Listen for scroll event
+window.addEventListener('scroll', reveal);
+</script>
+
 </body>
 </html>

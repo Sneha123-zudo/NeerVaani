@@ -268,7 +268,6 @@ html{
   justify-content: space-between;
   padding: 40px 20px;
   height: 700px;
-  background-image:url(images/about-bg.jpg);
 }
 .water_aboutimg img{
   width: 500px;
@@ -309,7 +308,6 @@ html{
 .obj-title h4{
   font-weight: 500;
   color: #496497;
-  margin-bottom: 30px;
 }
 .obj1{
   margin-top: 20px;
@@ -319,6 +317,158 @@ html{
   font-size: 15px;
   color: #0e2550;
 }
+
+.timeline-section{
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* The timeline */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #303c53;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 50px;
+}
+
+.container-timeline {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Animation starting position */
+  transition: all 0.6s ease-out; /* Smooth animation */
+  margin-bottom: 50px;
+}
+
+.container-timeline.active {
+  opacity: 1; /* Visible */
+  transform: translateY(0); /* Final position */
+}
+
+.container-timeline::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #162537;
+  border: 4px solid #2c4461;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content-timeline {
+  padding: 20px 30px;
+  background-color: #303c53;
+  position: relative;
+  border-radius: 15px;
+
+}
+.content-timeline h3{
+  color: rgb(233, 235, 241);
+  margin-bottom: 20px;
+}
+.content-timeline p{
+  color: rgb(233, 235, 241);
+}
+
+.timeline-feat h2{
+  text-align: center;
+  margin: 50px 0px;
+  color: #2c4461;
+  font-size: 1.8rem;
+}
+.timeline-feat p{
+  text-align: center;
+  color: #141f2d;
+  margin-bottom: 90px;
+  font-size: 1.2rem;
+
+}
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .container-timeline{
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .container-timeline::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  .right {
+    left: 0%;
+  }
+}
+
+
+
 /* Footer Section */
 .footer {
     background-color: #f6fdfb; /* Light pastel green */
@@ -371,6 +521,13 @@ html{
   .footer-links ul {
     list-style: none;
     padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
   }
   
   .footer-links ul li {
@@ -390,6 +547,12 @@ html{
   .social-icons {
     display: flex;
     gap: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
   }
   
   .social-icons .social-link{
@@ -409,3 +572,7 @@ html{
     color: #6c757d;
   }
   
+  .social-icons a{
+    color: #417579;
+    font-size: 1.3rem;
+  }

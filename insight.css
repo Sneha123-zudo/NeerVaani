@@ -1,0 +1,72 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Parkinsans:wght@300..800&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  h1, h2 {
+    color: #00509e;
+  }
+  
+  header.hero {
+    background: linear-gradient(to right, #1d976c, #93f9b9);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    background-image: url(images/e4ac6688dc61b8f0ac51571021af5fd1.jpg);
+  }
+  
+  header.hero .hero-content {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+  }
+  
+  .maps .map-placeholder {
+    background: #e6f7ff;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007acc;
+  }
+  
+  .cta-buttons button {
+    background: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cta-buttons button:hover {
+    background: #00509e;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #1d976c;
+    color: white;
+  }
+  
