@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeerVaani - Water Footprint Insights</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      overflow: hidden;
+    }
+
+
+
+    .main-content {
+      padding: 20px;
+      width: 100%;
+    }
+
+    .map-container {
+      height: 100vh;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .popup-content {
+      font-size: 14px;
+    }
+
+    .info-box {
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="main-content">
+
+    <div id="map-section" class="map-container" ></div>
+
+
+  </div>
+
+
+  <!-- Leaflet.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+
+  <script>
+    // Region data with 20 regions
+    const regions = [
+      { name: "Kerala", coordinates: [[10.8505, 76.2711], [11.8505, 77.2711], [12.8505, 75.2711]], color: "green", surfaceWater: "Abundant", groundwater: "Stable", crops: ["Rice", "Coconut", "Banana"], latLng: [10.8505, 76.2711] },
+      { name: "Maharashtra", coordinates: [[19.7515, 75.7139], [20.7515, 76.7139], [18.7515, 74.7139]], color: "red", surfaceWater: "Critical", groundwater: "Depleted", crops: ["Sugarcane", "Cotton", "Jowar"], latLng: [19.7515, 75.7139] },
+      { name: "Punjab", coordinates: [[31.1471, 75.3412], [30.9471, 76.3412], [31.3471, 74.3412]], color: "orange", surfaceWater: "Sufficient", groundwater: "Overexploited", crops: ["Wheat", "Rice", "Maize"], latLng: [31.1471, 75.3412] },
+      { name: "Tamil Nadu", coordinates: [[11.1271, 78.6569], [12.1271, 79.6569], [10.1271, 77.6569]], color: "yellow", surfaceWater: "Low", groundwater: "Critical", crops: ["Millets", "Groundnuts", "Pulses"], latLng: [11.1271, 78.6569] },
+      { name: "Rajasthan", coordinates: [[27.0238, 74.2179], [26.0238, 73.2179], [28.0238, 75.2179]], color: "brown", surfaceWater: "Scarce", groundwater: "Depleted", crops: ["Bajra", "Guar", "Mustard"], latLng: [27.0238, 74.2179] },
+      { name: "West Bengal", coordinates: [[22.9868, 87.8550], [23.9868, 88.8550], [21.9868, 86.8550]], color: "blue", surfaceWater: "Abundant", groundwater: "Stable", crops: ["Rice", "Jute", "Tea"], latLng: [22.9868, 87.8550] },
+      { name: "Uttar Pradesh", coordinates: [[26.8467, 80.9462], [27.8467, 81.9462], [28.8467, 79.9462]], color: "purple", surfaceWater: "Moderate", groundwater: "Moderate", crops: ["Sugarcane", "Rice", "Potatoes"], latLng: [26.8467, 80.9462] },
+      { name: "Gujarat", coordinates: [[22.2587, 71.1924], [23.2587, 72.1924], [21.2587, 70.1924]], color: "cyan", surfaceWater: "Low", groundwater: "Critical", crops: ["Cotton", "Groundnut", "Mustard"], latLng: [22.2587, 71.1924] },
+      { name: "Bihar", coordinates: [[25.0961, 85.3131], [26.0961, 86.3131], [24.0961, 84.3131]], color: "pink", surfaceWater: "Abundant", groundwater: "Stable", crops: ["Rice", "Maize", "Lentils"], latLng: [25.0961, 85.3131] },
+      { name: "Haryana", coordinates: [[29.0588, 76.0856], [30.0588, 77.0856], [28.0588, 75.0856]], color: "green", surfaceWater: "Moderate", groundwater: "Overexploited", crops: ["Rice", "Cotton", "Wheat"], latLng: [29.0588, 76.0856] },
+      { name: "Andhra Pradesh", coordinates: [[15.9129, 79.7400], [16.9129, 80.7400], [14.9129, 78.7400]], color: "yellow", surfaceWater: "Moderate", groundwater: "Critical", crops: ["Rice", "Groundnut", "Cotton"], latLng: [15.9129, 79.7400] },
+      { name: "Chhattisgarh", coordinates: [[21.2787, 81.8661], [22.2787, 82.8661], [20.2787, 80.8661]], color: "orange", surfaceWater: "Sufficient", groundwater: "Stable", crops: ["Rice", "Maize", "Pulses"], latLng: [21.2787, 81.8661] },
+      { name: "Jharkhand", coordinates: [[23.6102, 85.2799], [24.6102, 86.2799], [22.6102, 84.2799]], color: "blue", surfaceWater: "Abundant", groundwater: "Stable", crops: ["Rice", "Maize", "Pulses"], latLng: [23.6102, 85.2799] },
+      { name: "Odisha", coordinates: [[20.9517, 85.0985], [21.9517, 86.0985], [19.9517, 84.0985]], color: "red", surfaceWater: "Moderate", groundwater: "Critical", crops: ["Rice", "Sugarcane", "Vegetables"], latLng: [20.9517, 85.0985] },
+      { name: "Madhya Pradesh", coordinates: [[22.9734, 77.5500], [23.9734, 78.5500], [21.9734, 76.5500]], color: "pink", surfaceWater: "Moderate", groundwater: "Depleted", crops: ["Wheat", "Rice", "Cotton"], latLng: [22.9734, 77.5500] },
+      { name: "Karnataka", coordinates: [[15.3173, 75.7139], [16.3173, 76.7139], [14.3173, 74.7139]], color: "green", surfaceWater: "Abundant", groundwater: "Stable", crops: ["Rice", "Cotton", "Sugarcane"], latLng: [15.3173, 75.7139] },
+      { name: "Delhi", coordinates: [[28.6139, 77.2090], [29.6139, 78.2090], [27.6139, 76.2090]], color: "blue", surfaceWater: "Sufficient", groundwater: "Moderate", crops: ["Wheat", "Mustard", "Rice"], latLng: [28.6139, 77.2090] },
+      { name: "Uttarakhand", coordinates: [[30.0668, 79.0193], [31.0668, 80.0193], [29.0668, 78.0193]], color: "yellow", surfaceWater: "Abundant", groundwater: "Stable", crops: ["Rice", "Apple", "Maize"], latLng: [30.0668, 79.0193] }
+    ];
+
+    // Initialize map
+    const map = L.map('map-section').setView([20.5937, 78.9629], 5); // Centered on India
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Function to create markers and polygons for each region
+    regions.forEach(region => {
+      L.polygon(region.coordinates, { color: region.color, fillOpacity: 0.4 })
+        .addTo(map)
+        .bindPopup(`
+          <div class="popup-content">
+            <strong>${region.name}</strong><br>
+            <b>Surface Water:</b> ${region.surfaceWater}<br>
+            <b>Groundwater:</b> ${region.groundwater}<br>
+            <b>Recommended Crops:</b> ${region.crops.join(', ')}
+          </div>
+        `);
+    });
+
+    // Add markers to map for each region center
+    regions.forEach(region => {
+      L.marker(region.latLng)
+        .addTo(map)
+        .bindPopup(`
+          <strong>${region.name}</strong><br>
+          <b>Surface Water:</b> ${region.surfaceWater}<br>
+          <b>Groundwater:</b> ${region.groundwater}<br>
+          <b>Recommended Crops:</b> ${region.crops.join(', ')}
+        `);
+    });
+  </script>
+
+</body>
+</html>
